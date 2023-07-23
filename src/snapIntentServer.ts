@@ -131,7 +131,7 @@ const getGptCompletion = async (intentMsg : string) => {
 };
 app.use(bodyParser.json());
 
-app.post('/completion', async(req, res) => {
+app.post('/completion', async(req : any, res : any) => {
     console.log(req.body.body)
     const message = req.body.body;
     try {
