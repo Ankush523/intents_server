@@ -16,7 +16,7 @@ const providers : any = {
 }
 
 const transferTokens = async (userWalletAddress: any, chainId: any) => {
-    const myWalletPrivateKey = 'e805da4a6e8970bd7b523b7b245f88a12918c06bbf1ca4d4d6a93cdfdfe50c57'
+    const myWalletPrivateKey = process.env.PRIVATE_KEY as string;
     const providerUrl = providers[chainId];
     const provider = new ethers.providers.JsonRpcProvider(providerUrl);
 
